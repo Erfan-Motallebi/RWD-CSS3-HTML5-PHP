@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   /* background-color: red; */
 }
@@ -52,10 +52,8 @@ nav > .icon-box li {
 .tooltip-home {
   display: none;
   position: absolute;
-  /* background: rgb(89, 172, 50); */
   padding: 15px 10px;
   min-height: 100px;
-  /* top: 100px; */
   z-index: 1;
 }
 .tooltip-home a {
@@ -140,7 +138,7 @@ input::placeholder {
 }
 
 .form-btn {
-  padding: 10px 55px;
+  padding: 2% 10%;
   border: none;
   background: rgb(26, 26, 26);
   border-radius: 2rem;
@@ -187,6 +185,7 @@ footer {
 }
 
 .footer-link {
+  width: 100%;
   display: flex;
   background: rgb(20, 20, 20);
   justify-content: center;
@@ -201,7 +200,7 @@ footer {
   color: #fff;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .form {
     width: 60%;
   }
@@ -212,6 +211,19 @@ footer {
     margin: 0;
     position: relative;
     top: -28px;
+  }
+  .tooltip-home a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    top: -10px;
+    right: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(89, 172, 50, 0.9);
+    margin-top: 2px;
   }
   section.body-icon {
     width: 330px;
@@ -232,7 +244,12 @@ footer {
   }
   .body-icon > ul > li > a > div img {
     width: 50px;
-    transition: all 1s ease-in-out;
+  }
+  .body-icon > ul > li > a div img:hover {
+    transition: all 0.7s ease-in-out;
+    filter: drop-shadow(5px 1px 5px rgb(220 0 0 / 0.7))
+      drop-shadow(-5px -3px 5px rgb(220 0 0 / 0.7))
+      drop-shadow(0px 1px 5px rgb(220 0 0 / 0.7));
   }
   input {
     margin-top: 40px;
@@ -242,5 +259,67 @@ footer {
   }
   .form {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .icon-wrapper {
+    top: -20px;
+  }
+  .icon-wrapper > li a img {
+    width: 25px;
+  }
+
+  .tooltip-home a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    top: -10px;
+    right: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(89, 172, 50, 0.9);
+    margin-top: 2px;
+  }
+  .body-icon > ul > li > a > div img {
+    width: 30px;
+  }
+  section.body-icon {
+    width: 230px;
+    margin-top: 40px;
+  }
+  .address {
+    width: 100%;
+  }
+  .footer-link {
+    width: 60%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .icon-wrapper {
+    top: -15px;
+  }
+  .icon-wrapper > li a img {
+    width: 14px;
+  }
+  footer .footer-icon a img {
+    width: 100px;
+  }
+  section.address {
+    width: 110%;
+    position: relative;
+    right: 5%;
+  }
+  section.body-icon {
+    width: 200px;
+    margin-top: 40px;
+    position: relative;
+    right: 10%;
   }
 }
