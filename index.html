@@ -104,8 +104,15 @@
       </section>
 
       <section class="form">
-        <form action="#php">
-          <input type="text" name="name" id="name" placeholder="Name" /> <br />
+        <form action="/controller/formController.php" method="POST">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+          <br />
           <input
             type="text"
             name="subject"
@@ -118,6 +125,7 @@
             name="email"
             id="email"
             placeholder="Mail Address"
+            required
           />
           <br />
           <textarea
@@ -125,6 +133,7 @@
             id="message"
             placeholder="Message . . ."
             class="message"
+            optional
           ></textarea>
           <button class="form-btn" type="submit">SEND</button>
         </form>
